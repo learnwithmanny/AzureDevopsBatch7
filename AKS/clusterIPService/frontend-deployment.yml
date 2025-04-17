@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: frontend-app
+ labels:
+  app: labeloffrontend-app
+spec:
+ replicas: 1
+ selector:
+  matchLabels:
+   app: frontend-app
+ template:
+  metadata:
+   name: frontend-app-pod
+   labels:
+    app: frontend-app
+  spec:
+   containers:
+   - name: frontend-container
+     image: eglitmyk/clusteripsvcfrontapp:v1
+     ports:
+     - containerPort: 80

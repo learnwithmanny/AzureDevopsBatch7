@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+ name: mypod1
+ labels:
+  app: myapp1
+spec:
+  containers:
+  - name: mycontainer1
+    image: eglitmyk/demoappclinic
+    ports:
+    - containerPort: 80

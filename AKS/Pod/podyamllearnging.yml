@@ -1,0 +1,17 @@
+apiVersion: v1   #-- key-value pair or string
+kind: Pod  #-- key-value pair or string
+metadata:  #-- dictionary
+  name: myappimage   #-- key-value pair or string
+  labels:            #-- dictionary
+    app: myapp1      #-- key-value pair or string
+spec:                #-- dictionary
+  containers:        #-- dictionary
+  - name: myappimage #-- key-value pair or string
+    image: eglitmyk/myappimage #-- key-value pair or string
+    ports:               #-- dictionary
+    - containerPort: 80  #-- key-value pair or string
+
+  - name: myappimage #-- key-value pair or string
+    image: eglitmyk/myappimage #-- key-value pair or string
+    ports:               #-- dictionary
+    - containerPort: 80  #-- key-value pair or string

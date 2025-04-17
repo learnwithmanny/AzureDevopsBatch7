@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+ name: backend-app-clusterip   #important - use this in the code of Frontend App or other deployment which wants to connect with backend app
+spec:
+  selector:
+    app: backend-app
+  ports:
+  - name: http
+    port: 80
+    targetPort: 80

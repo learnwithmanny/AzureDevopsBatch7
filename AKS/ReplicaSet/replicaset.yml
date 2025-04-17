@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+ name: myrs1
+ labels:
+  app: labelofmyrs1
+spec:
+ replicas: 3
+ selector:
+  matchLabels:
+   app: myapp1
+ template:
+  metadata:
+   name: mypod1
+   labels:
+    app: myapp1
+  spec:
+   containers:
+   - name: mycontainer1
+     image: eglitmyk/demoappclinic
+     ports:
+     - containerPort: 80

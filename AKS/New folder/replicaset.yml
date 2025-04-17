@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: my-rs
+  labels:
+    app: my-rs
+spec:
+  replicas: 7
+  selector:
+    matchLabels:
+      app: my-rs
+  template:
+    metadata:
+      labels:
+        app: my-rs
+    spec:
+      containers:
+      - name: my-rs-app
+        image: eglitmyk/demoappclinic

@@ -1,0 +1,123 @@
+Azure Infrastructure
+ Virtual Machine
+ Virtual Network
+ Storage Account
+ Load Balancers
+ Application Gateway
+ DNS
+
+Terraform(IaC)
+ Variables
+ Dependencies
+ Modules
+ Resource Deployment
+ Terraform workflow
+ Terraform commands
+ State file
+ Current State vs Desired State
+ 
+AKS and Docker 
+ Microservices and Containers
+ AKS Deployment
+ AKS Connectivity
+ Deployment vs Replica Set
+ Services: Load Balancer, Cluster IP
+ Ingress Service ( nginx or other ingress service)
+ Helm and Helm chart
+ Storage Class, PVC and PV
+ AKS upgrade
+
+Azure DevOps
+ Project and Organization
+ Repo(Git, Git hub or Azure Repo)
+ Build Pipelines
+ Self Hosted vs MS Hosted
+ Release Pipeline
+ Platforms ( VM , Azure APP Service, AKS)
+
+
+Always to ask the Job Description
+
+
+1. You have to deploy an application on VM in a way so that it can achieve high availability and scalability
+What solution will you propose?
+ Ans: Load Balancer , Application Gateway to achieve High Availability and VMSS or Azure APP service for scalability
+
+2. My application is accessible from the IP address but not from the Host name? However the application is only accessible with in company's network,
+and I want it to be accessible from Internet also. Explain all the reasons behind it?
+
+DNS
+ Private DNS
+ Public DNS
+
+Asking about Platform to which app is hosted
+are we using any load balancer services 
+
+3. How do you deploy or provision or build or create resources in your environment?
+Terraform, Azurerm provider
+
+4. How do you manage state files
+5. Implicit Dependency and Explicit Dependency
+6. Commands related to Terraform
+
+7. AKS 
+  Architecture of AKS 
+ a. You have deployed a POD, but it keeps crashing. How would you troubleshoot?
+ b. A application deployed inside AKS is not accessible from internet? what are area we will look to fix this
+ c. A node is not accessible? How would you troubleshoot?
+ d. Difference between Load Balancer service and Ingress Service. Give one example each to explain the differences
+ e. users reporting that application hosted in AKS is experiencing high latency. What's your approach to troubleshoot?
+       Check resource usage
+       Logs
+       Events
+       Service or logs related to services
+       Network relates issues
+
+8. Azure Devops
+a. Project and Organization
+b. You have a source code in Repo( GitHub/Azure Repo), how would you approach to setup pipeline to deploy the app on Azure App Service
+  	First integrate the Repo in Azure Devops Portal
+        We will create Build Pipeline( based on the nature of code)
+        We need to choose , if we want to use ms hosted or self hosted VMs)
+        We need install/add dependencies if any based on app we deploy( need to discuss this with app team)
+        Setup the build pipeline in a way so that we can get Build Artifact
+        Setup Release pipeline
+	Include and configure settings of the platform ( like  azure app , vm , aks etc)
+   	Run the pipeline 
+	Look the logs and events generated during the execution
+
+c. How do you provision your resources using Azure Devops?
+      First tell about IaC tool ( like terraform)
+      Build Pipeline
+      Release Pipeline
+d. How do you deploy a web app using Azure Devops on AKS
+    1. Yaml Manifest file to deploy app on AKS
+    2. Service Connection with AKS and Docker Repository or any private repository
+    3. Need to know about namespace ( usually it is 'Default' but it can be any specific as well)
+    4. Deploy commands "Kubectl apply -f path"
+
+
+
+
+How to be up to date
+1.LinkedIn ( follow multiple pages related to Azure, AzureDevops, AKS, Containers, Terraform..)
+2. Medium.com( lot of good article on the topics like AKS, terraform, Linux, Devops)
+3. Practice 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

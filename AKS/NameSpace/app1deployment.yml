@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app1-deployment
+spec:
+  replicas: 2
+  selector:
+   matchLabels:
+    app: app1
+  template:
+    metadata:
+     name: app1-pod
+     labels:
+      app: app1
+    spec:
+     containers:
+     - name: app1-container
+       image: eglitmyk/demoappclinic
+       ports:
+        - containerPort: 80

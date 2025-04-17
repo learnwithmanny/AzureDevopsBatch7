@@ -1,0 +1,13 @@
+write function to add 4 digit numbers
+Add-FourDigitNumbers {
+  param (
+    [int]$num1,
+    [int]$num2
+  )
+
+  if ($num1 -ge 1000 -and $num1 -le 9999 -and $num2 -ge 1000 -and $num2 -le 9999) {
+    return $num1 + $num2
+  } else {
+    throw "Both numbers must be 4-digit numbers."
+  }
+}

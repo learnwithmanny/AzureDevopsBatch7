@@ -1,0 +1,57 @@
+# comment
+# This is the draft of Yaml File
+# This is a student file in Yaml
+
+#this is how we write key-value pair or string -Start
+name: manish
+age: 36
+city: delhi
+country: india
+#this is how we write key-value pair or string -End
+
+---
+#this is how you write dictionary in Yaml - Start
+
+student:
+ name: manish
+ age: 38
+ city: delhi
+
+ #this is how you write dictionary in Yaml - end
+---
+#this is how you write List in Yaml - Start
+
+student:
+ name: manish
+ age: 38
+ city: delhi
+ subject: 
+  - phy
+  - chem
+  - maths
+  - computer
+
+ #this is how you write List in Yaml - end
+
+---
+#this is how you write mutliple List in Yaml - Start
+
+student:
+ name: manish
+ age: 38
+ city: delhi
+ subject: 
+  - phy
+  - chem
+  - maths
+  - computer
+ hobbies:
+  - reading
+  - drawing
+  - travelling
+
+ #this is how you write mutliple List in Yaml - end
+
+
+---
+ #document separator
